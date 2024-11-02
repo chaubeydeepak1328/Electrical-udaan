@@ -1,0 +1,29 @@
+.flipbook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 90vw; /* Full width of viewport */
+  max-height: 90vh; /* Full height of viewport */
+  margin: auto;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.flipbook {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+.flipbook-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
