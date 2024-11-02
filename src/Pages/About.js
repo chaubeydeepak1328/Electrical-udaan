@@ -34,20 +34,7 @@ const floatRight = {
     }
 }
 
-const floatLeft = {
-    initial: {
-        opacity: 0,
-        x: 200,
-    },
-    animate: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: .5,
-            delay: 0.05
-        }
-    }
-}
+
 
 const Grow = {
     initial: {

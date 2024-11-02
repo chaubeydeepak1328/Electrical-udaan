@@ -22,7 +22,7 @@ const Home = () => {
         return (
             <div className="slider-container" key={index}>
                 <div className="image-slider">
-                    <a href={curElm.link} target='_blank'>
+                    <a href={curElm.link} target='_blank' rel="noreferrer">
                         <img loading='lazy' src={curElm.img} alt="" />
                     </a>
                 </div>

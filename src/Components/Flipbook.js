@@ -57,7 +57,7 @@ const Flipbook = () => {
                             ))
                         ) : (
                             <div>
-                                <p>Loading pages...</p> // Placeholder while loading
+                                <p>Loading pages...</p>
                             </div>
                         )
                     }
