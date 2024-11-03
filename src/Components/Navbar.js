@@ -57,9 +57,9 @@ const Navbar = () => {
         <div class="logo">
           <div className="logo-div">
             <NavLink to="/" onClick={scrollToTop}>
-              <div className="d-flex flex-column">
+              <div>
                 <img loading="lazy" style={{ width: "2rem" }} src={logo2} alt="logo2" />
-                <img loading="lazy" src={logo1} alt="logo1" />
+                <img loading="lazy" style={{ width: "2rem" }} src={logo1} alt="logo1" />
               </div>
             </NavLink>
           </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
             <NavLink to="/">
               <div>
                 <img loading="lazy" style={{ width: "2rem" }} src={logo2} alt="logo2" />
-                <img loading="lazy" src={logo1} alt="logo1" />
+                <img loading="lazy" style={{ width: "2rem" }} src={logo1} alt="logo1" />
               </div>
             </NavLink>
           </div>
@@ -179,7 +179,7 @@ const Navbar = () => {
           <ModalCloseButton />
           <ModalBody>
             <div className="modal-header">
-              <h2>Contact <span style={{ color: "orange" }}>Us</span></h2>
+              <h2 style={{ textAlign: "center" }}>Contact <span style={{ color: "orange" }}>Us</span></h2>
             </div>
             <form className="modal-form" onSubmit={sumbitForm}>
               <div className="form-group">
