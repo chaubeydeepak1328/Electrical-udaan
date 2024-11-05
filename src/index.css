@@ -759,11 +759,83 @@ footer {
 }
 
 /* ======================================================================== */
-/* About css come here */
+/* Upcoming Exhibition*/
 /* ======================================================================== */
 
-/* @media (min-width: 992px) {
-  .About-posterText {
+.upcoming-exhibition {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.upcoming-exhibition p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.exhibition-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exhibition-card a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.exhibition-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.upcoming-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  animation: colorBlink 1.5s infinite alternate;
+}
+
+/* Define the color-blinking animation */
+@keyframes colorBlink {
+  0% {
+    color: #ff5f5f; /* Start with red */
+  }
+  50% {
+    color: #ffa500; /* Transition to orange */
+  }
+  100% {
+    color: #32cd32; /* End with green */
+  }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .upcoming-exhibition p {
     font-size: 2rem;
   }
-} */
+
+  .exhibition-card {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .upcoming-exhibition p {
+    font-size: 2.5rem;
+  }
+
+  .exhibition-card {
+    max-width: 60%;
+  }
+}

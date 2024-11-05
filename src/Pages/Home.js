@@ -16,6 +16,9 @@ import m1 from "../Images/mazine1.png";
 import m2 from "../Images/mazine2.png";
 
 
+import exhibition from "../Images/exhibition.jpg";
+
+
 const Home = () => {
 
     const addsContent = Adds.map((curElm, index) => {
@@ -92,6 +95,16 @@ const Home = () => {
                 <AliceCarousel loop={true} mouseTracking infinite autoPlayInterval={1000} animationDuration={1500} disableDotsControls responsive={responsive} items={addsContent} autoPlay disableButtonsControls />
             </div>
 
+
+            {/* Upcoming exhabition tag come here  */}
+            <div className="upcoming-exhibition">
+                <p className='upcoming-text'>upcoming exhibition</p>
+                <div className='exhibition-card'>
+                    <a href="https://fxg8.short.gy/electricals-udaan-webbnr">
+                        <img src={exhibition} alt={exhibition} />
+                    </a>
+                </div>
+            </div>
 
             {/* Subscription tag come here  */}
 
