@@ -35,9 +35,45 @@ const Navbar = () => {
   const [Email, setEmail] = useState();
   const [Phone, setPhone] = useState();
   const [Message, setMessage] = useState();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(null);
 
-  const sumbitForm = () => {
-    //
+  const sumbitForm = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mvgoakgv",
+        {
+          method: "POST",
+          headers: {
+            "content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            Name,
+            Email,
+            Phone,
+            Message
+          })
+        });
+
+      if (response.ok) {
+        setSubmissionSuccess(true);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      }
+      else {
+        setSubmissionSuccess(false);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmissionSuccess(false);
+    }
+    finally {
+      setIsSubmitting(false);
+    }
   }
 
   // Scroll to top function
@@ -226,7 +262,11 @@ const Navbar = () => {
                   required
                 />
               </div>
-              <button type="submit" className="submit-button">Submit</button>
+              <button type="submit" className="submit-button" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+              {submissionSuccess && <p className="success-message" style={{ color: "green" }}>Thank you! Your message has been sent.</p>}
+              {submissionSuccess === false && <p className="error-message">Oops! Something went wrong. Please try again.</p>}
             </form>
           </ModalBody>
         </ModalContent>
