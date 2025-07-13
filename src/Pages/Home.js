@@ -16,7 +16,7 @@ import m1 from "../Images/mazine1.png";
 import m2 from "../Images/mazine2.png";
 
 
-import exhibition from "../Images/exhibition.jpg";
+import exhibition from "../Images/exhibition.jpeg";
 
 
 const Home = () => {
